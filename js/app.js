@@ -1,4 +1,3 @@
-
 // Enemies our player must avoid
 var Enemy = function() {
     // Variables applied to each of our instances go here,
@@ -12,7 +11,7 @@ var Enemy = function() {
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
-    // You should multiply any movements by the dt parameter
+    // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
 };
@@ -22,37 +21,14 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// *****Now write your own player class*****//
-
-var Player = function() {
-        // The image/sprite for our player, chosen at the beginning
-    var sprite = chosenSprite.selectedSprite;
-}
-
-
- // Chosen Sprite variable  //
-  var chosenSprite = {
-    selectedSprite: availableSprites[0]
-  };
-
-// Available Sprites to choose from //
-var availableSprites = [
-    'img/arcade/char-boy.png',
-    'img/arcade/char-cat-girl.png',
-    'img/arcade/char-horn-girl.png',
-    'img/arcade/char-pink-girl.png',
-    'img/arcade/char-princess-girl.png'
-];
-
+// Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
 
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
-var allEnemies = [];
 // Place the player object in a variable called player
-var player = [];
 
 
 
@@ -66,5 +42,5 @@ document.addEventListener('keyup', function(e) {
         40: 'down'
     };
 
-//    player.handleInput(allowedKeys[e.keyCode]);
+    player.handleInput(allowedKeys[e.keyCode]);
 });
