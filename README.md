@@ -4,7 +4,7 @@ Zombie Cross
 
 ### Where to Play
 HEY! Thanks for checking this out
-Play the game [here!](http://kjwhitla.github.io/frontend-nanodegree-arcade-game)
+Play the game [here!](http://madebykeegan.com/zombie-cross)
 
 ### Main Objective
 
