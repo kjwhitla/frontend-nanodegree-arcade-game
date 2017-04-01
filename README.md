@@ -6,6 +6,9 @@ Zombie Cross
 HEY! Thanks for checking this out
 Play the game [here!](http://kjwhitla.github.io/frontend-nanodegree-arcade-game)
 
+To play the game locally download the repo to your desktop. Open the index file with the browser of your choice.
+Let the Zombie mayhem begin!
+
 ### Main Objective
 
 Get your avatar across the road without being hit by a ZOMBIE!

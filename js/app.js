@@ -92,10 +92,10 @@ Player.prototype.update = function() {
     
     //SCORING FUNCTION
     if(this.y <= 40){
-        player.score = player.score + 50;
-        document.getElementsByClassName('score')[0].innerHTML = 'Score: ' + player.score;
+        this.score = this.score + 50;
+        document.getElementsByClassName('score')[0].innerHTML = 'Score: ' + this.score;
 //        console.log("score");
-        player.reset();
+        this.reset();
     }
        
 };
