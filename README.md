@@ -4,7 +4,7 @@ Zombie Cross
 
 ### Where to Play
 HEY! Thanks for checking this out
-Play the game [here!](http://kjwhitla.github.io/frontend-nanodegree-arcade-game)
+Play the game [here!](http://madebykeegan.com/zombie-cross)
 
 To play the game locally download the repo to your desktop. Open the index file with the browser of your choice.
 Let the Zombie mayhem begin!
