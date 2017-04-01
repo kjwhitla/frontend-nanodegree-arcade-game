@@ -25,8 +25,8 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
 
-    canvas.width = 505;
-    canvas.height = 606;
+    canvas.width = 606;
+    canvas.height = 590;
     doc.body.appendChild(canvas);
 
     /* This function serves as the kickoff point for the game loop itself
@@ -45,9 +45,16 @@ var Engine = (function(global) {
         /* Call our update/render functions, pass along the time delta to
          * our update function since it may be used for smooth animation.
          */
-        update(dt);
-        render();
+        
+        //ADDED GAMEOVER CONDITIONS
+         if (game.gameEnd) {
+              renderEndgame();
+         } else {
+             update(dt);
+             render();
+         }
 
+        
         /* Set our lastTime variable which is used to determine the time delta
          * for the next time this function is called.
          */
@@ -116,7 +123,7 @@ var Engine = (function(global) {
                 'images/grass-block.png'    // Row 2 of 2 of grass
             ],
             numRows = 6,
-            numCols = 5,
+            numCols = 6,
             row, col;
 
         /* Loop through the number of rows and columns we've defined above
@@ -153,6 +160,28 @@ var Engine = (function(global) {
 
         player.render();
     }
+    
+    //RENDERS GAMEEND 
+    function renderEndgame() {
+        // Turn transparency on
+        ctx.globalAlpha=0.9; 
+        ctx.fillStyle="white"; 
+        ctx.fillRect(-20,20,650,600);
+        
+        ctx.stroke();
+        ctx.textAlign = "";
+        ctx.fillStyle="black"; 
+        ctx.font = "50px CircularPro-Bold";
+        ctx.fillText("GAME OVER",160,295);
+        
+        ctx.font = "30px CircularPro-Bold";
+        ctx.fillText("Nice Going!",235,350);
+        
+        ctx.font = "26px CircularPro-Bold";
+        ctx.fillText("To play again press the",160,400);
+        ctx.fillText("button above or refresh the page",110,430);
+     }
+ 
 
     /* This function does nothing but it could have been a good place to
      * handle game reset states - maybe a new game menu or a game over screen
@@ -170,7 +199,7 @@ var Engine = (function(global) {
         'images/stone-block.png',
         'images/water-block.png',
         'images/grass-block.png',
-        'images/enemy-bug.png',
+        'images/enemy-zombie.png',
         'images/char-boy.png'
     ]);
     Resources.onReady(init);
